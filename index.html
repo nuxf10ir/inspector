@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>В гостях у налоговой</title>
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__in">
+            <div id="cardgame" class="cardgame">
+                <div id="card" class="card card-content__type-loader">
+                    <div class="lds-css ng-scope">
+                        <div class="lds-ripple">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="start__tmpl" type="text/x-javascript-tmpl">
+        <div class="start-description">
+            <div class="description-title">
+                Деловая игра &laquo;Ответь инспектору&raquo;
+            </div>
+            <div class="description-content">
+                Предлагаем Вам принять участие в&nbsp;деловой игре.
+                Итак, вам предстоит ответить на&nbsp;7&nbsp;вопросов инспектора.
+                Какие из&nbsp;ответов вам особенно удались, а&nbsp;над какими формулировками еще надо поработать
+                узнаете в&nbsp;конце игры.
+            </div>
+        </div>
+        <button id="start-button" class="start-button">
+            Начать
+        </button>
+    </script>
+
+    <script id="quiz__tmpl" type="text/x-javascript-tmpl">
+        <div id="quiz-reaction" class="normal"></div>
+        <div class="quiz-question">
+            <div class="quiz-question__in">
+                {{text}}
+            </div>
+        </div>
+
+        <ul class="quiz-variants">
+            {[ _.each(variants, function(variant) { ]}
+                <li class="quiz-variant">
+                    <a class="js-to-answer" data-answer="{{variant.answerId}}" data-score="{{variant.score}}" data-question="{{id}}">
+                        {{variant.text}}
+                    </a>
+                </li>
+            {[ }); ]}
+        </ul>
+    </script>
+
+    <script id="answer__tmpl" type="text/x-javascript-tmpl">
+        <div id="quiz-reaction" class="{{type}}"></div>
+        <div class="quiz-question">
+            <div class="quiz-question__in">
+                {{title}}
+            </div>
+        </div>
+
+        <ul class="quiz-variants">
+            <li class="quiz-variant">
+                <a class="js-to-question" data-question="{{nextQuestion}}">
+                    {{text}}
+                </a>
+            </li>
+        </ul>
+    </script>
+
+
+    <script id="finish__tmpl" type="text/x-javascript-tmpl">
+        <div class="finish-description">
+            <div class="description-title">
+                Резюме:
+            </div>
+            <div class="description-content">
+                {[ if (result > 5) { ]}
+                    У&nbsp;вас обоснованное дробление, ваши ответы должны убедить контролеров, но&nbsp;могут потребоваться подтверждающие документы
+                {[ } else if (result > 3) { ]}
+                    У&nbsp;вас обоснованное дробление, но&nbsp;есть риски, что некоторые ответы поставят под сомнение. Вам несомненно потребуются еще убедительные доводы и&nbsp;подтверждающие документы
+                {[ } else { ]}
+                    Будьте готовы доказывать обоснованное дробление, скорее всего инспекторов не&nbsp;убедили ваши пояснения
+                {[ } ]}
+            </div>
+
+            <button class="finish-button js-to-restart">
+                Вам будет полезно узнать
+            </button>
+
+        </div>
+
+    </script>
+
+    <script src="dist/bundle.js"></script>
+
+</body>
+</html>

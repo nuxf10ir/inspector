@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Berlingske Sans';
+    src:	url('./fonts/BerlingskeSans-Rg.eot');
+    src:	url('./fonts/BerlingskeSans-Rg.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/BerlingskeSans-Rg.woff2') format('woff2'),
+    url('./fonts/BerlingskeSans-Rg.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berlingske Sans';
+    src:	url('./fonts/BerlingskeSans-Blk.eot');
+    src:	url('./fonts/BerlingskeSans-Blk.eot?#iefix') format('embedded-opentype');
+    src:	url('./fonts/BerlingskeSans-Blk.woff2')format('woff2'),
+    url('./fonts/BerlingskeSans-Blk.woff')format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.cardgame {
+    width: 745px;
+    height: 580px;
+    margin: 100px auto;
+    font-family: 'Berlingske Sans', Arial, Helvetica, sans-serif;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.card.card-content__type-loader .lds-css {
+    padding-top: 100px;
+}
+
+.card.card-content__type-start {
+    background: url("./../i/start.png") no-repeat 0 0;
+}
+
+.start-description,
+.finish-description {
+    display: block;
+    position: absolute;
+    top: 170px;
+    width: 670px;
+    left: 35px;
+    height: 220px;
+    box-shadow: 0 0 5px 1px #0000004d;
+    background: #ffffffcf;
+}
+
+.finish-description {
+    bottom: 45px;
+    height: 290px;
+    top: auto;
+}
+
+.start-description .description-title,
+.finish-description .description-title {
+    margin: 40px 15px 30px;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 30px;
+}
+
+.finish-description .description-title {
+    margin-top: 20px;
+}
+
+.start-description .description-content,
+.finish-description .description-content {
+    margin: 0 30px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.start-button {
+    position: absolute;
+    bottom: 61px;
+    left: 222px;
+    display: block;
+    background: #ff0000;
+    width: 318px;
+    padding: 25px 0;
+    box-shadow: 3px 3px 5px 2px #000000a6;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.finish-button {
+    position: relative;
+    display: block;
+    background: #ff0000;
+    width: 318px;
+    padding: 25px 0;
+    box-shadow: 3px 3px 5px 2px #000000a6;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    margin: 35px auto 25px;
+}
+
+.start-button:hover,
+.finish-button:hover {
+    background: #a00303;
+}
+
+.card.card-content__type-quiz {
+    background: url("./../i/back.png") no-repeat 0 0;
+}
+
+.quiz-question {
+    position: absolute;
+    width: 243px;
+    height: 110px;
+    top: 70px;
+    left: 80px;
+    background: url(./../i/baloon.png) no-repeat 0 0;
+    padding: 55px 50px;
+    font-size: 17px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 20px;
+    display: table;
+}
+
+.quiz-question .quiz-question__in {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.quiz-variants {
+    position: absolute;
+    bottom: 45px;
+    margin: 0;
+    width: 630px;
+    left: 63px;
+    list-style: none;
+    padding: 18px 28px;
+    background: #ffffffcf;
+    box-sizing: border-box;
+}
+
+.quiz-variant {
+    margin: 0 auto 12px;
+    padding: 0;
+    background: #fff;
+    box-shadow: 1px 2px 5px 2px #0000004d;
+    position: relative;
+    height: 40px;
+    border-color: #eceae0;
+    display: table;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.quiz-variant a {
+    padding: 0 20px;
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 72px;
+}
+
+#quiz-reaction {
+    position: absolute;
+    top: 60px;
+    left: 294px;
+    width: 312px;
+    height: 492px;
+    background-image: url(./../i/inspector.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#quiz-reaction.normal {
+    background-position: 0 0;
+}
+#quiz-reaction.good {
+    background-position: -310px 0;
+}
+#quiz-reaction.bad {
+    background-position: -630px 0;
+}
