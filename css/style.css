@@ -109,6 +109,8 @@
     border: none;
     color: #fff;
     margin: 35px auto 25px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .start-button:hover,
